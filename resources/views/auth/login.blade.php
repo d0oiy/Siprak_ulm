@@ -4,7 +4,7 @@
 <div class="container d-flex justify-content-center align-items-center min-vh-100">
     <div class="card shadow-sm p-4" style="width: 100%; max-width: 400px;">
         <div class="text-center mb-4">
-            <img src="{{ asset('logo.png') }}" alt="Logo" width="70" class="mb-3">
+            <img src="{{ asset('images/ULM.png') }}" alt="Logo" width="70">
             <h4 class="fw-bold">Masuk ke SIPRAK</h4>
             <p class="text-muted small">Sistem Informasi Pelaporan Sarana & Prasarana</p>
         </div>
