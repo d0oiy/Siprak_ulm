@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container py-4">
-    <h2 class="mb-4">🛠️ Dashboard Admin</h2>
+    <h2 class="mb-4"> Dashboard Admin</h2>
 
     <!-- Statistik Ringkasan -->
     <div class="row mb-4">
@@ -40,8 +40,13 @@
         </div>
     </div>
 
+    <!-- Tombol Export -->
+    <a href="{{ route('admin.dashboard.exportReports') }}" class="btn btn-success mb-3">
+         Export Laporan ke Excel
+    </a>
+
     <!-- Daftar Laporan -->
-    <h4 class="mb-3">📋 Semua Laporan</h4>
+    <h4 class="mb-3">Semua Laporan</h4>
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
@@ -72,7 +77,7 @@
                     <td>{{ $report->created_at->diffForHumans() }}</td>
                     <td>
                         <a href="{{ route('admin.reports.edit', $report->id) }}" class="btn btn-sm btn-warning">Edit</a>
-<form action="{{ route('admin.reports.destroy', $report->id) }}" method="POST" class="d-inline">
+                        <form action="{{ route('admin.reports.destroy', $report->id) }}" method="POST" class="d-inline">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Hapus laporan ini?')">Hapus</button>

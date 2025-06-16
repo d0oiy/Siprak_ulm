@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container py-4">
-    <h2 class="mb-4">👤 Dashboard Pengguna</h2>
+    <h2 class="mb-4">Dashboard</h2>
 
     <!-- Ringkasan Laporan -->
     <div class="row mb-4">
@@ -34,7 +34,7 @@
 
     <!-- Tombol Buat Laporan -->
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <h4>📋 Daftar Laporan Anda</h4>
+        <h4> Daftar Laporan Anda</h4>
         <a href="{{ route('reports.create') }}" class="btn btn-success shadow">
             + Buat Laporan Baru
         </a>

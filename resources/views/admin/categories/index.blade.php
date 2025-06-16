@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container py-4">
-    <h2 class="mb-4">📂 Daftar Kategori</h2>
+    <h2 class="mb-4"> Daftar Kategori</h2>
 
     <a href="{{ route('admin.categories.create') }}" class="btn btn-success mb-3">+ Tambah Kategori</a>
 

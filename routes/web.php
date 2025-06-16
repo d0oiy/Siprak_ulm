@@ -9,6 +9,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AdminUserController;
+use App\Http\Controllers\ExportController;
 use App\Http\Middleware\RoleMiddleware;
 
 /*
@@ -59,6 +60,9 @@ Route::middleware(['auth', RoleMiddleware::class . ':admin'])
 
         // Manajemen Pengguna
         Route::resource('/users', AdminUserController::class);
+
+        // Export Reports
+        Route::get('/dashboard/export-reports', [ExportController::class, 'export'])->name('dashboard.exportReports');
     });
 
 // User (mahasiswa/dosen) routes
